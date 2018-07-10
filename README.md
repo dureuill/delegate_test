@@ -131,3 +131,4 @@ The current implementation is meant as a quick proof-of-concept. It particular, 
 * The proc macro doesn't use explicit call syntax with `<self as Trait>::method(...)` everywhere, which may cause problems in some cases.
 * I'm unsure if the delegation trait should always expose `into_inner`, or only when required by the trait, or never and fail for traits needing this.
 * Currently no support of associated traits or constants, as I didn't look into it.
+* The generation of the delegation trait is not clean at all: can conflict with other items in the namespace, in particular if trying to delegate two traits in the same module. Plus, the generated trait name must be "guessed" by the user at the moment.
