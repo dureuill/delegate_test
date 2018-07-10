@@ -1,0 +1,10 @@
+[package]
+name = "rust_delegate_test"
+version = "0.1.0"
+authors = ["Louis Dureuil <louis.dureuil@xinra.net>"]
+publish = false
+
+[dependencies]
+boss-type = { path = "boss-type" }
+worker-trait = { path = "worker-trait" }
+worker-type = { path = "worker-type" }
