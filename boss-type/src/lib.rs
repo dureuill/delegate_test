@@ -9,7 +9,7 @@ pub mod boss {
         worker : Worker
     }
 
-    impl work::delegate::Work for Boss {
+    impl work::delegate_Work for Boss {
         type Inner = Worker;
 
         fn inner(&self) -> &Self::Inner { &self.worker }
