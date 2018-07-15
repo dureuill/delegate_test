@@ -112,7 +112,7 @@ fn main() {
 The current implementation is meant as a quick proof-of-concept. It particular, it exhibits the following limitations:
 
 * Having to mark delegable trait
-* No delegation of struct (could be a natural extension with [inherent traits](https://github.com/rust-lang/rfcs/pull/2375).
+* No delegation of struct (could be a natural extension with [inherent traits](https://github.com/rust-lang/rfcs/pull/2375)).
 * Having to implement the delegable trait, which can be more boilerplate than implementing the original trait! This could be alleviated with macros for common cases (e.g., delegating `MyTrait` to a field with a `delegate!(self.x, MyTrait)`).
 * The proc macro doesn't properly report errors yet.
 * ~~The proc macro doesn't use explicit call syntax with `<self as Trait>::method(...)` everywhere, which may cause problems in some cases.~~
